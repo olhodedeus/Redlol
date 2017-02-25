@@ -1,5 +1,5 @@
 return {
-	bot_api_key = "217433230:AAHnz8aLddnx3geeS5wC1THLj6uNcDKzEtE", --Please add your bot api key here!
+	bot_api_key = "", --Please add your bot api key here!
 	thecatapi_key = 'http://thecatapi.com/?id=5vs',
 	cmd = '^[/!#]',
 	allowed_updates = {"message", "edited_message", "callback_query"},
@@ -29,7 +29,7 @@ return {
 		realm_max_subgroups = 6
 	},
 	channel = '@Redlol', --channel username with the '@'
-	source_code = 'https://github.com/RememberTheAir/GroupButler/tree/beta',
+	source_code = 'https://github.com/olhodedeus/Redlol',
 	help_groups_link = 'telegram.me/GrupoRedlol',
 	plugins = {
 		'onmessage', --THIS MUST BE THE FIRST: IF AN USER IS FLOODING/IS BLOCKED, THE BOT WON'T GO THROUGH PLUGINS
@@ -75,7 +75,7 @@ return {
 	available_languages = {
 		['en'] = 'English 🇬🇧',
 		['it'] = 'Italiano 🇮🇹',
-		['es'] = 'Español ��🇸',
+		['es'] = 'Español 🇪🇸',
 		['pt_BR'] = 'Português 🇧🇷',
 		['ru'] = 'Русский 🇷🇺',
 		['de'] = 'Deutsch 🇩🇪',
