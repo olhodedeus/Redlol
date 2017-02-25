@@ -44,7 +44,7 @@ You can easily install Group Butler by running the following commands:
 ```bash
 # Tested on Ubuntu 16.04
 
-$ wget https://raw.githubusercontent.com/RememberTheAir/GroupButler/master/install.sh
+$ wget https://raw.githubusercontent.com/olhodedeus/Redlol/master/install.sh
 $ bash install.sh
 $ sudo apt-get install luarocks
 $ sudo luarocks install luautf8
