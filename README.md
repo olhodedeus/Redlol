@@ -46,8 +46,7 @@ You can easily install Group Butler by running the following commands:
 
 $ wget https://raw.githubusercontent.com/olhodedeus/Redlol/master/install.sh
 $ bash install.sh
-$ sudo apt-get install luarocks
-$ sudo luarocks install luautf8
+$ chmod 755 launch.sh
 ```
 
 or
