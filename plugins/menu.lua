@@ -26,6 +26,10 @@ local function get_button_description(key)
         return _([[When someone uses an #extra
 👥: the bot will answer in the group (always, with admins)
 👤: the bot will answer in private]])
+    elseif key == 'Extrap' then
+        return _([[When someone uses an #extra
+👥: the bot will answer in the group (always, with admins)
+👤: the bot will answer in private]])
     elseif key == 'Arab' then
         return _("Select what the bot should do when someone sends a message with arab characters")
     elseif key == 'Antibot' then
@@ -104,7 +108,7 @@ local function usersettings_table(settings, chat_id)
     local return_table = {}
     local icon_off, icon_on = '👤', '👥'
     for field, default in pairs(settings) do
-        if field == 'Extra' or field == 'Rules' then
+        if field == 'Extra' or field == 'Rules' or field == 'Extrap' then
             local status = (db:hget('chat:'..chat_id..':settings', field)) or default
             if status == 'off' then
                 return_table[field] = icon_off
@@ -121,7 +125,7 @@ local function adminsettings_table(settings, chat_id)
     local return_table = {}
     local icon_off, icon_on = '☑️', '✅'
     for field, default in pairs(settings) do
-        if field ~= 'Extra' and field ~= 'Rules' then
+        if field ~= 'Extra' and field ~= 'Rules' and field ~= 'Extrap' then
             local status = (db:hget('chat:'..chat_id..':settings', field)) or default
             if status == 'off' then
                 return_table[field] = icon_off
@@ -155,9 +159,11 @@ local function insert_settings_section(keyboard, settings_section, chat_id)
 		Welcome = _("Welcome"),
 		Goodbye = _("Goodbye"),
 		Extra = _("Extra"),
+		Extrap = _("Extrap"),
 		Flood = _("Anti-flood"),
 		Silent = _("Silent mode"),
 		Rules = _("Rules"),
+		Sobre = _("Sobre"),
 		Arab = _("Arab"),
 		Rtl = _("RTL"),
 		Antibot = _("Ban bots"),
