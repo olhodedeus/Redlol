@@ -2228,6 +2228,10 @@ msgstr "👋🏼 Despedida"
 msgid "Extra"
 msgstr "➕ Extra"
 
+#: plugins/menu.lua:162 utilities.lua:659
+msgid "Extrap"
+msgstr "✔️ Extrap"
+
 #: plugins/menu.lua:158 utilities.lua:660
 msgid "Anti-flood"
 msgstr "🌊 Anti-flood "
