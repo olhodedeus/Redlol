@@ -69,6 +69,7 @@ return {
 		'ranking_data',
 		'ranking',
 		'extra', --must be the last plugin in the list.
+		'extrap', --must be the last plugin in the list.
 		'chatter2',
 	},
 	multipurpose_plugins = {},
@@ -94,6 +95,7 @@ return {
 			['Welcome'] = 'off',
 			['Goodbye'] = 'off',
 			['Extra'] = 'on',
+			['Extrap'] = 'on',
 			--['Flood'] = 'off',
 			['Silent'] = 'off',
 			['Rules'] = 'off',
