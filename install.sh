@@ -31,7 +31,7 @@ else
     read -p "Do you want to install redlol? (Y/N): "
     
     if [ "$REPLY" == "Y" ]; then
-        branch="beta"
+        branch="master"
     fi
     
     echo -e "\e[1;36mFetching latest Group Butler source code (branch: $branch)\e[0m"
