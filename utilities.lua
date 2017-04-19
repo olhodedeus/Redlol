@@ -709,7 +709,25 @@ function utilities.getExtraList(chat_id)
 		return _("List of *custom commands*:\n") .. table.concat(lines, '\n')
 	end
 end
+-- alteração extrap
+local function sort_funct(a, b)
+	print(a, b)
+return a:gsub('/', '') < b:gsub('/', '') end
 
+function utilities.getExtraList(chat_id)
+	local hash = 'chat:'..chat_id..':extrap'
+	local commands = db:hkeys(hash)
+	if not next(commands) then
+		return _("No commands set")
+	else
+		local lines = {}
+		for i, k in ipairs(commands) do
+			table.insert(lines, (k:escape(true)))
+		end
+		return _("List of *custom commands*:\n") .. table.concat(lines, '\n')
+	end
+end
+--fimalteração extrap
 function utilities.getSettings(chat_id)
     local hash = 'chat:'..chat_id..':settings'
 
@@ -722,6 +740,7 @@ function utilities.getSettings(chat_id)
 		Welcome = _("Welcome message"),
 		Goodbye = _("Goodbye message"),
 		Extra = _("Extra"),
+		Extrap = _("Extrap"),
 		Flood = _("Anti-flood"),
 		Antibot = _("Ban bots"),
 		Silent = _("Silent mode"),
@@ -790,6 +809,7 @@ function utilities.changeSettingStatus(chat_id, field)
 		welcome = _("Welcome message won't be displayed from now"),
 		goodbye = _("Goodbye message won't be displayed from now"),
 		extra = _("#extra commands are now available only for moderator"),
+		extrap = _("#extra commands are now available only for moderator"),
 		flood = _("Anti-flood is now off"),
 		rules = _("/rules will reply in private (for users)"),
 		silent = _("Silent mode is now off"),
@@ -801,6 +821,7 @@ function utilities.changeSettingStatus(chat_id, field)
 		welcome = _("Welcome message will be displayed"),
 		goodbye = _("Goodbye message will be displayed"),
 		extra = _("#extra commands are now available for all"),
+		extrap = _("#extra commands are now available for all"),
 		flood = _("Anti-flood is now on"),
 		rules = _("/rules will reply in the group (with everyone)"),
 		silent = _("Silent mode is now on"),
