@@ -1,15 +1,15 @@
 return {
-	bot_api_key = "", --Please add your bot api key here!
+	bot_api_key = "297706271:AAGiOFjLbwT7QmPGjRnW-DmrmjdjN-Baqec", --Please add your bot api key here!
 	thecatapi_key = 'http://thecatapi.com/?id=5vs',
 	cmd = '^[/!#]',
 	allowed_updates = {"message", "edited_message", "callback_query"},
 	--db = 2,
 	  db = 10,
 	--default redis db: 0,
-	superadmins = {65330733,96438491},
+	superadmins = {12345678}
 	log = {
-		chat = -1001080002429, --Your log chat, where your bot must be added!
-		admin = 65330733, --The admin.
+		chat = -12345678, --Your log chat, where your bot must be added!
+		admin = 12345678, --The admin.
 		stats = nil
 	},
 	human_readable_version = '4.2.0',
@@ -74,19 +74,19 @@ return {
 	},
 	multipurpose_plugins = {},
 	available_languages = {
-		['en'] = 'English 🇬🇧',
-		['it'] = 'Italiano 🇮🇹',
-		['es'] = 'Español 🇪🇸',
-		['pt_BR'] = 'Português 🇧🇷',
-		['ru'] = 'Русский 🇷🇺',
-		['de'] = 'Deutsch 🇩🇪',
-		--['sv'] = 'Svensk 🇸🇪',
-		['ar'] = 'العربية 🇸🇩',
-		--['fr'] = 'Français 🇫🇷',
-		['zh'] = '中文 🇨🇳',
-		['fa'] = 'فارسی 🇮🇷',
-		['id'] = 'Bahasa Indonesia 🇮🇩',
-		['nl'] = 'Dutch 🇱🇺'
+		['en'] = 'English ????',
+		['it'] = 'Italiano ????',
+		['es'] = 'Español ????',
+		['pt_BR'] = 'Português ????',
+		['ru'] = '??????? ????',
+		['de'] = 'Deutsch ????',
+		--['sv'] = 'Svensk ????',
+		['ar'] = '??????? ????',
+		--['fr'] = 'Français ????',
+		['zh'] = '?? ????',
+		['fa'] = '????? ????',
+		['id'] = 'Bahasa Indonesia ????',
+		['nl'] = 'Dutch ????'
 		-- more languages will come
 	},
 	allow_fuzzy_translations = false,
